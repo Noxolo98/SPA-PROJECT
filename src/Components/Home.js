@@ -1,5 +1,5 @@
 import React from 'react';
-import nailsImage from '../nail-jpg/nail-image.jpg'; // Update the path based on your structure
+import nailsImage from '../nail-jpg/nail-image.jpg';
 
 const Home = () => {
     return (

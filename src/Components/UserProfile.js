@@ -6,7 +6,7 @@ const UserProfile = () => {
 
     useEffect(() => {
         const fetchUserData = async () => {
-            const response = await fetch('localhost/api/subjects/1'); // Example API
+            const response = await fetch('/api/subjects/1');
             const data = await response.json();
             setUser(data);
         };
