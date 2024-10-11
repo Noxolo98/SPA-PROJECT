@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/NavBar.js';
+import Navbar from './Components/NavBar';
 import Home from './Components/Home';
 import About from './Components/About';
 import UserProfile from './Components/UserProfile';
@@ -14,12 +14,12 @@ const App = () => {
                 <Routes>
                     <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/profile" element={<UserProfile />} />
+                    <Route path="/user/:username" element={<UserProfile />} />
                 </Routes>
             </Router>
         </UserProvider>
     );
 };
 
-export default App;
 
+export default App;
