@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-function NailShop() {
+function UserProfile() {
   const customers = {
-    janedoe: { name: "Jane Doe", age: 28, service: "Acrylic Nails", price: "$50", contact: "123-456-7890", description: "Loves vibrant colors and trendy designs." },
-    marysmith: { name: "Mary Smith", age: 21, service: "Gel Nails", price: "$40", contact: "987-654-3210", description: "Prefers subtle and elegant looks." },
-    lisajones: { name: "Lisa Jones", age: 27, service: "French Manicure", price: "$30", contact: "456-789-1234", description: "Classic and minimalist style." },
-    susanjackson: { name: "Susan Jackson", age: 25, service: "Polygel Nails", price: "$45", contact: "789-123-4567", description: "Bold and creative designs." },
-    sarawilson: { name: "Sara Wilson", age: 27, service: "Dip Powder Nails", price: "$35", contact: "321-654-9870", description: "Simple yet sophisticated." },
+    asemahlewill: { name: "Asemahle Will", age: 28, service: "Acrylic Nails", price: "R150", contact: "123-456-7890", description: "Loves vibrant colors and trendy designs." },
+    marysmith: { name: "Mary Smith", age: 21, service: "Gel Nails", price: "R140", contact: "987-654-3210", description: "Prefers subtle and elegant looks." },
+    lisasam: { name: "Lisa Sam", age: 27, service: "French Manicure", price: "R130", contact: "456-789-1234", description: "Classic and minimalist style." },
+    susanjackson: { name: "Susan Jackson", age: 25, service: "Polygel Nails", price: "R145", contact: "789-123-4567", description: "Bold and creative designs." },
+    sarawilson: { name: "Sara Wilson", age: 27, service: "Dip Powder Nails", price: "R135", contact: "321-654-9870", description: "Simple yet sophisticated." },
   };
 
-  const { username } = useParams(); // Get the username from the URL
-  const [profile, setProfile] = useState(null); // To store customer data
-  const [loading, setLoading] = useState(false); // To manage loading state
+  const { username } = useParams(); 
+  const [profile, setProfile] = useState(null); 
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function NailShop() {
 
   const handleSelectChange = (event) => {
     const selectedUser = event.target.value;
-    navigate(`/nailShop/${selectedUser}`); // Navigate to the selected customer's profile URL
+    navigate(`/userprofile/${selectedUser}`); // Navigate to the selected customer's profile URL
   };
 
   return (
@@ -71,4 +71,4 @@ function NailShop() {
   );
 }
 
-export default NailShop;
+export default UserProfile;
