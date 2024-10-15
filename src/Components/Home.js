@@ -1,5 +1,5 @@
 import React from 'react';
-import nailsImage from '../nail-jpg/nail-image.jpg';
+import nailsImage from '../nail-jpg/nail.jpg';
 
 const Home = () => {
     return (
